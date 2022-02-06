@@ -1,0 +1,70 @@
+#headerArea {
+  background-color: dimgray;
+  height: 50px;
+  text-align: center;
+  color: white;
+}
+
+#main {
+  position: relative;
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#base{
+  width: 100%;
+}
+
+.eye{
+  width: 20%;
+}
+
+#left{
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  animation: myRotationX_rev 1s linear infinite;
+}
+
+#right{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  animation: myRotationX 1s linear infinite;
+}
+
+#nose{
+  position: absolute;
+  top: 48%;
+  left: 40%;
+  width: 20%;
+  animation: myRotationX 1s linear infinite;
+  animation-play-state: running;
+}
+
+#mouth{
+  position: absolute;
+  top: 68%;
+  left: 36%;
+  width: 25%;
+  animation: myRotationX_rev 1s linear infinite;
+}
+
+@keyframes myRotationX{
+  0% {
+    transform:rotate(0deg);/* アニメーションの進みが0%の時の状態 */
+  }
+  100% {
+      transform:rotate(360deg);/* アニメーションの進みが100%の時の状態 */
+  }
+}
+@keyframes myRotationX_rev{
+  0% {
+    transform:rotate(0deg);/* アニメーションの進みが0%の時の状態 */
+  }
+  100% {
+      transform:rotate(-360deg);/* アニメーションの進みが100%の時の状態 */
+  }
+}
